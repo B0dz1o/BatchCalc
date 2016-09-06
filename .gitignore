@@ -28,4 +28,6 @@ xcuserdata/
 *.dSYM
 
 Pods/
+.DS_Store
+
 
