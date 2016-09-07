@@ -15,6 +15,11 @@
 		672B40001D7FB6A5003C1557 /* bat3.txt in Resources */ = {isa = PBXBuildFile; fileRef = 672B3FFC1D7FB291003C1557 /* bat3.txt */; };
 		67E0E1E11D7F2CD4008CBDAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0E1E01D7F2CD4008CBDAB /* main.m */; };
 		67FEFC811D805B49005A0EA6 /* TextParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFC801D805B49005A0EA6 /* TextParser.m */; };
+		67FEFC8A1D807856005A0EA6 /* TextParserTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFC891D807856005A0EA6 /* TextParserTest.m */; };
+		67FEFC8F1D807915005A0EA6 /* bat1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 672B3FE11D7F8D4C003C1557 /* bat1.txt */; };
+		67FEFC901D807918005A0EA6 /* bat2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 672B3FFB1D7FB273003C1557 /* bat2.txt */; };
+		67FEFC911D80791B005A0EA6 /* bat3.txt in Resources */ = {isa = PBXBuildFile; fileRef = 672B3FFC1D7FB291003C1557 /* bat3.txt */; };
+		67FEFC931D807984005A0EA6 /* TextParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFC801D805B49005A0EA6 /* TextParser.m */; };
 		A7B96069C83397931C07F6C4 /* Pods_Batch_Calc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4CFC8AFFFEA1F776B725FB /* Pods_Batch_Calc.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +52,9 @@
 		67FEFC7F1D805B49005A0EA6 /* TextParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextParser.h; path = Sources/Parser/TextParser.h; sourceTree = "<group>"; };
 		67FEFC801D805B49005A0EA6 /* TextParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextParser.m; path = Sources/Parser/TextParser.m; sourceTree = "<group>"; };
 		67FEFC821D805BB2005A0EA6 /* ResourceParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResourceParser.h; path = Sources/Parser/ResourceParser.h; sourceTree = "<group>"; };
+		67FEFC871D807855005A0EA6 /* TextParserTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextParserTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		67FEFC891D807856005A0EA6 /* TextParserTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextParserTest.m; sourceTree = "<group>"; };
+		67FEFC8B1D807856005A0EA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		745DDE40E891746B2B215265 /* Pods-Batch_Calc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Batch_Calc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Batch_Calc/Pods-Batch_Calc.debug.xcconfig"; sourceTree = "<group>"; };
 		A82EFDD30530594AF0793F6D /* Pods-Batch_Calc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Batch_Calc.release.xcconfig"; path = "Pods/Target Support Files/Pods-Batch_Calc/Pods-Batch_Calc.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,6 +72,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7B96069C83397931C07F6C4 /* Pods_Batch_Calc.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67FEFC841D807855005A0EA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +146,7 @@
 				672B3FE01D7F8D1C003C1557 /* TestResources */,
 				67E0E1DF1D7F2CD4008CBDAB /* Batch_Calc */,
 				672B3FF31D7FA7E7003C1557 /* FileHandlerTest */,
+				67FEFC881D807856005A0EA6 /* TextParserTest */,
 				67E0E1DE1D7F2CD4008CBDAB /* Products */,
 				5C8F067B40F056E146C3E37A /* Pods */,
 				6EBA45C0A7F0F19377AA90CE /* Frameworks */,
@@ -142,6 +158,7 @@
 			children = (
 				67E0E1DD1D7F2CD4008CBDAB /* Batch_Calc */,
 				672B3FF21D7FA7E7003C1557 /* FileHandlerTest.xctest */,
+				67FEFC871D807855005A0EA6 /* TextParserTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,6 +181,15 @@
 				67FEFC821D805BB2005A0EA6 /* ResourceParser.h */,
 			);
 			name = Parser;
+			sourceTree = "<group>";
+		};
+		67FEFC881D807856005A0EA6 /* TextParserTest */ = {
+			isa = PBXGroup;
+			children = (
+				67FEFC891D807856005A0EA6 /* TextParserTest.m */,
+				67FEFC8B1D807856005A0EA6 /* Info.plist */,
+			);
+			path = TextParserTest;
 			sourceTree = "<group>";
 		};
 		6EBA45C0A7F0F19377AA90CE /* Frameworks */ = {
@@ -213,6 +239,23 @@
 			productReference = 67E0E1DD1D7F2CD4008CBDAB /* Batch_Calc */;
 			productType = "com.apple.product-type.tool";
 		};
+		67FEFC861D807855005A0EA6 /* TextParserTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67FEFC8E1D807856005A0EA6 /* Build configuration list for PBXNativeTarget "TextParserTest" */;
+			buildPhases = (
+				67FEFC831D807855005A0EA6 /* Sources */,
+				67FEFC841D807855005A0EA6 /* Frameworks */,
+				67FEFC851D807855005A0EA6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TextParserTest;
+			productName = TextParserTest;
+			productReference = 67FEFC871D807855005A0EA6 /* TextParserTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -226,6 +269,9 @@
 						CreatedOnToolsVersion = 7.3.1;
 					};
 					67E0E1DC1D7F2CD4008CBDAB = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					67FEFC861D807855005A0EA6 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
 				};
@@ -244,6 +290,7 @@
 			targets = (
 				67E0E1DC1D7F2CD4008CBDAB /* Batch_Calc */,
 				672B3FF11D7FA7E7003C1557 /* FileHandlerTest */,
+				67FEFC861D807855005A0EA6 /* TextParserTest */,
 			);
 		};
 /* End PBXProject section */
@@ -256,6 +303,16 @@
 				672B3FFE1D7FB6A0003C1557 /* bat1.txt in Resources */,
 				672B40001D7FB6A5003C1557 /* bat3.txt in Resources */,
 				672B3FFF1D7FB6A2003C1557 /* bat2.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67FEFC851D807855005A0EA6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67FEFC8F1D807915005A0EA6 /* bat1.txt in Resources */,
+				67FEFC911D80791B005A0EA6 /* bat3.txt in Resources */,
+				67FEFC901D807918005A0EA6 /* bat2.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +368,15 @@
 				67FEFC811D805B49005A0EA6 /* TextParser.m in Sources */,
 				672B3FDF1D7F89A5003C1557 /* FileHandler.m in Sources */,
 				67E0E1E11D7F2CD4008CBDAB /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67FEFC831D807855005A0EA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67FEFC931D807984005A0EA6 /* TextParser.m in Sources */,
+				67FEFC8A1D807856005A0EA6 /* TextParserTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +508,28 @@
 			};
 			name = Release;
 		};
+		67FEFC8C1D807856005A0EA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TextParserTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.b0dz1o.TextParserTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		67FEFC8D1D807856005A0EA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TextParserTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.b0dz1o.TextParserTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -471,6 +559,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		67FEFC8E1D807856005A0EA6 /* Build configuration list for PBXNativeTarget "TextParserTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67FEFC8C1D807856005A0EA6 /* Debug */,
+				67FEFC8D1D807856005A0EA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
