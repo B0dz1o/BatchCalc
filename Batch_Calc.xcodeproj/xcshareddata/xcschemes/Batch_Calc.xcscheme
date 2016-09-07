@@ -34,20 +34,6 @@
                ReferencedContainer = "container:Batch_Calc.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "NO"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "672B3FF11D7FA7E7003C1557"
-               BuildableName = "FileHandlerTest.xctest"
-               BlueprintName = "FileHandlerTest"
-               ReferencedContainer = "container:Batch_Calc.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
