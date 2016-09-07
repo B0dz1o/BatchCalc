@@ -14,6 +14,7 @@
 		672B3FFF1D7FB6A2003C1557 /* bat2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 672B3FFB1D7FB273003C1557 /* bat2.txt */; };
 		672B40001D7FB6A5003C1557 /* bat3.txt in Resources */ = {isa = PBXBuildFile; fileRef = 672B3FFC1D7FB291003C1557 /* bat3.txt */; };
 		67E0E1E11D7F2CD4008CBDAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0E1E01D7F2CD4008CBDAB /* main.m */; };
+		67FEFC811D805B49005A0EA6 /* TextParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 67FEFC801D805B49005A0EA6 /* TextParser.m */; };
 		A7B96069C83397931C07F6C4 /* Pods_Batch_Calc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4CFC8AFFFEA1F776B725FB /* Pods_Batch_Calc.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,9 @@
 		672B3FFC1D7FB291003C1557 /* bat3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = bat3.txt; path = TestResources/bat3.txt; sourceTree = "<group>"; };
 		67E0E1DD1D7F2CD4008CBDAB /* Batch_Calc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Batch_Calc; sourceTree = BUILT_PRODUCTS_DIR; };
 		67E0E1E01D7F2CD4008CBDAB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		67FEFC7F1D805B49005A0EA6 /* TextParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextParser.h; path = Sources/Parser/TextParser.h; sourceTree = "<group>"; };
+		67FEFC801D805B49005A0EA6 /* TextParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextParser.m; path = Sources/Parser/TextParser.m; sourceTree = "<group>"; };
+		67FEFC821D805BB2005A0EA6 /* ResourceParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResourceParser.h; path = Sources/Parser/ResourceParser.h; sourceTree = "<group>"; };
 		745DDE40E891746B2B215265 /* Pods-Batch_Calc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Batch_Calc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Batch_Calc/Pods-Batch_Calc.debug.xcconfig"; sourceTree = "<group>"; };
 		A82EFDD30530594AF0793F6D /* Pods-Batch_Calc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Batch_Calc.release.xcconfig"; path = "Pods/Target Support Files/Pods-Batch_Calc/Pods-Batch_Calc.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +82,7 @@
 		672B3FD01D7F8075003C1557 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				67FEFC7E1D805B1E005A0EA6 /* Parser */,
 				672B3FD11D7F807F003C1557 /* Resources */,
 			);
 			name = Sources;
@@ -149,6 +154,16 @@
 				67E0E1E01D7F2CD4008CBDAB /* main.m */,
 			);
 			path = Batch_Calc;
+			sourceTree = "<group>";
+		};
+		67FEFC7E1D805B1E005A0EA6 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				67FEFC7F1D805B49005A0EA6 /* TextParser.h */,
+				67FEFC801D805B49005A0EA6 /* TextParser.m */,
+				67FEFC821D805BB2005A0EA6 /* ResourceParser.h */,
+			);
+			name = Parser;
 			sourceTree = "<group>";
 		};
 		6EBA45C0A7F0F19377AA90CE /* Frameworks */ = {
@@ -293,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67FEFC811D805B49005A0EA6 /* TextParser.m in Sources */,
 				672B3FDF1D7F89A5003C1557 /* FileHandler.m in Sources */,
 				67E0E1E11D7F2CD4008CBDAB /* main.m in Sources */,
 			);
@@ -436,6 +452,7 @@
 				672B3FF91D7FA7E7003C1557 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		67E0E1D81D7F2CD4008CBDAB /* Build configuration list for PBXProject "Batch_Calc" */ = {
 			isa = XCConfigurationList;
