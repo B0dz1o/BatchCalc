@@ -7,11 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Header.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        for (int i = 1; i < argc ; ++i) {
+            NSString * filePath = [NSString stringWithUTF8String:argv[i]];
+            id <TextResource> input = [[FileHandler alloc] initWithFile:filePath];
+            NSString * commands = [input retrieveInput];
+        }
     }
     return 0;
 }

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		672B3FDF1D7F89A5003C1557 /* FileHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 672B3FDE1D7F89A5003C1557 /* FileHandler.m */; };
+		672B3FF51D7FA7E7003C1557 /* FileHandlerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 672B3FF41D7FA7E7003C1557 /* FileHandlerTest.m */; };
+		672B3FFA1D7FABCE003C1557 /* FileHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 672B3FDE1D7F89A5003C1557 /* FileHandler.m */; };
+		672B3FFE1D7FB6A0003C1557 /* bat1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 672B3FE11D7F8D4C003C1557 /* bat1.txt */; };
+		672B3FFF1D7FB6A2003C1557 /* bat2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 672B3FFB1D7FB273003C1557 /* bat2.txt */; };
+		672B40001D7FB6A5003C1557 /* bat3.txt in Resources */ = {isa = PBXBuildFile; fileRef = 672B3FFC1D7FB291003C1557 /* bat3.txt */; };
 		67E0E1E11D7F2CD4008CBDAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0E1E01D7F2CD4008CBDAB /* main.m */; };
 		A7B96069C83397931C07F6C4 /* Pods_Batch_Calc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4CFC8AFFFEA1F776B725FB /* Pods_Batch_Calc.framework */; };
 /* End PBXBuildFile section */
@@ -25,6 +31,16 @@
 
 /* Begin PBXFileReference section */
 		3E4CFC8AFFFEA1F776B725FB /* Pods_Batch_Calc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Batch_Calc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		672B3FD51D7F812A003C1557 /* TextResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextResource.h; path = Sources/Resources/TextResource.h; sourceTree = "<group>"; };
+		672B3FD81D7F84F3003C1557 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Header.h; path = Headers/Header.h; sourceTree = "<group>"; };
+		672B3FDD1D7F89A5003C1557 /* FileHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileHandler.h; path = Sources/Resources/FileHandler.h; sourceTree = "<group>"; };
+		672B3FDE1D7F89A5003C1557 /* FileHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FileHandler.m; path = Sources/Resources/FileHandler.m; sourceTree = "<group>"; };
+		672B3FE11D7F8D4C003C1557 /* bat1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = bat1.txt; path = TestResources/bat1.txt; sourceTree = "<group>"; };
+		672B3FF21D7FA7E7003C1557 /* FileHandlerTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FileHandlerTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		672B3FF41D7FA7E7003C1557 /* FileHandlerTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileHandlerTest.m; sourceTree = "<group>"; };
+		672B3FF61D7FA7E7003C1557 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		672B3FFB1D7FB273003C1557 /* bat2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = bat2.txt; path = TestResources/bat2.txt; sourceTree = "<group>"; };
+		672B3FFC1D7FB291003C1557 /* bat3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = bat3.txt; path = TestResources/bat3.txt; sourceTree = "<group>"; };
 		67E0E1DD1D7F2CD4008CBDAB /* Batch_Calc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Batch_Calc; sourceTree = BUILT_PRODUCTS_DIR; };
 		67E0E1E01D7F2CD4008CBDAB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		745DDE40E891746B2B215265 /* Pods-Batch_Calc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Batch_Calc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Batch_Calc/Pods-Batch_Calc.debug.xcconfig"; sourceTree = "<group>"; };
@@ -32,6 +48,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		672B3FEF1D7FA7E7003C1557 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		67E0E1DA1D7F2CD4008CBDAB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -52,10 +75,57 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		672B3FD01D7F8075003C1557 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				672B3FD11D7F807F003C1557 /* Resources */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		672B3FD11D7F807F003C1557 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				672B3FD51D7F812A003C1557 /* TextResource.h */,
+				672B3FDD1D7F89A5003C1557 /* FileHandler.h */,
+				672B3FDE1D7F89A5003C1557 /* FileHandler.m */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		672B3FD61D7F8303003C1557 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				672B3FD81D7F84F3003C1557 /* Header.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		672B3FE01D7F8D1C003C1557 /* TestResources */ = {
+			isa = PBXGroup;
+			children = (
+				672B3FE11D7F8D4C003C1557 /* bat1.txt */,
+				672B3FFB1D7FB273003C1557 /* bat2.txt */,
+				672B3FFC1D7FB291003C1557 /* bat3.txt */,
+			);
+			name = TestResources;
+			sourceTree = "<group>";
+		};
+		672B3FF31D7FA7E7003C1557 /* FileHandlerTest */ = {
+			isa = PBXGroup;
+			children = (
+				672B3FF41D7FA7E7003C1557 /* FileHandlerTest.m */,
+				672B3FF61D7FA7E7003C1557 /* Info.plist */,
+			);
+			path = FileHandlerTest;
+			sourceTree = "<group>";
+		};
 		67E0E1D41D7F2CD4008CBDAB = {
 			isa = PBXGroup;
 			children = (
+				672B3FE01D7F8D1C003C1557 /* TestResources */,
 				67E0E1DF1D7F2CD4008CBDAB /* Batch_Calc */,
+				672B3FF31D7FA7E7003C1557 /* FileHandlerTest */,
 				67E0E1DE1D7F2CD4008CBDAB /* Products */,
 				5C8F067B40F056E146C3E37A /* Pods */,
 				6EBA45C0A7F0F19377AA90CE /* Frameworks */,
@@ -66,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				67E0E1DD1D7F2CD4008CBDAB /* Batch_Calc */,
+				672B3FF21D7FA7E7003C1557 /* FileHandlerTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,6 +144,8 @@
 		67E0E1DF1D7F2CD4008CBDAB /* Batch_Calc */ = {
 			isa = PBXGroup;
 			children = (
+				672B3FD61D7F8303003C1557 /* Headers */,
+				672B3FD01D7F8075003C1557 /* Sources */,
 				67E0E1E01D7F2CD4008CBDAB /* main.m */,
 			);
 			path = Batch_Calc;
@@ -89,6 +162,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		672B3FF11D7FA7E7003C1557 /* FileHandlerTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 672B3FF71D7FA7E7003C1557 /* Build configuration list for PBXNativeTarget "FileHandlerTest" */;
+			buildPhases = (
+				672B3FEE1D7FA7E7003C1557 /* Sources */,
+				672B3FEF1D7FA7E7003C1557 /* Frameworks */,
+				672B3FF01D7FA7E7003C1557 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FileHandlerTest;
+			productName = FileHandlerTest;
+			productReference = 672B3FF21D7FA7E7003C1557 /* FileHandlerTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		67E0E1DC1D7F2CD4008CBDAB /* Batch_Calc */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 67E0E1E41D7F2CD4008CBDAB /* Build configuration list for PBXNativeTarget "Batch_Calc" */;
@@ -117,6 +207,9 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Piotr Bogdan";
 				TargetAttributes = {
+					672B3FF11D7FA7E7003C1557 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 					67E0E1DC1D7F2CD4008CBDAB = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
@@ -135,9 +228,23 @@
 			projectRoot = "";
 			targets = (
 				67E0E1DC1D7F2CD4008CBDAB /* Batch_Calc */,
+				672B3FF11D7FA7E7003C1557 /* FileHandlerTest */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		672B3FF01D7FA7E7003C1557 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				672B3FFE1D7FB6A0003C1557 /* bat1.txt in Resources */,
+				672B40001D7FB6A5003C1557 /* bat3.txt in Resources */,
+				672B3FFF1D7FB6A2003C1557 /* bat2.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		320B85E0934E15DDB7CF3E5F /* [CP] Check Pods Manifest.lock */ = {
@@ -173,10 +280,20 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		672B3FEE1D7FA7E7003C1557 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				672B3FFA1D7FABCE003C1557 /* FileHandler.m in Sources */,
+				672B3FF51D7FA7E7003C1557 /* FileHandlerTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		67E0E1D91D7F2CD4008CBDAB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				672B3FDF1D7F89A5003C1557 /* FileHandler.m in Sources */,
 				67E0E1E11D7F2CD4008CBDAB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -184,6 +301,28 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		672B3FF81D7FA7E7003C1557 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FileHandlerTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.b0dz1o.FileHandlerTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		672B3FF91D7FA7E7003C1557 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FileHandlerTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.b0dz1o.FileHandlerTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		67E0E1E21D7F2CD4008CBDAB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -269,7 +408,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 745DDE40E891746B2B215265 /* Pods-Batch_Calc.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				HEADER_SEARCH_PATHS = "${SRCROOT}/Sources";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -277,13 +419,24 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A82EFDD30530594AF0793F6D /* Pods-Batch_Calc.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				HEADER_SEARCH_PATHS = "${SRCROOT}/Sources";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		672B3FF71D7FA7E7003C1557 /* Build configuration list for PBXNativeTarget "FileHandlerTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				672B3FF81D7FA7E7003C1557 /* Debug */,
+				672B3FF91D7FA7E7003C1557 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		67E0E1D81D7F2CD4008CBDAB /* Build configuration list for PBXProject "Batch_Calc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

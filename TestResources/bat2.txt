@@ -1,0 +1,3 @@
+power 2
+multiply 3
+apply 5
