@@ -27,7 +27,7 @@ NSString * filePath;
     if (input != nil) {
         return input;
     } else {
-        NSLog(@"Error %@ %@ occured when reading file %@", err,[err userInfo], filePath);
+        NSLog(@"Error occured when reading file %@", filePath);
         return nil;
     }
     
