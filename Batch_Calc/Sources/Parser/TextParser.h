@@ -11,4 +11,6 @@
 
 @interface TextParser : NSObject <ResourceParser>
 
+- (instancetype) initWithCommands: (NSString *) commands;
+
 @end

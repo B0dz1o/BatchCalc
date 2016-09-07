@@ -10,4 +10,7 @@
 
 @protocol ResourceParser <NSObject>
 
+-(BOOL) checkBatch;
+-(void) performOperations;
+
 @end
