@@ -16,8 +16,9 @@ int main(int argc, const char * argv[]) {
             id <TextResource> input = [[FileHandler alloc] initWithFile:filePath];
             NSString * commands = [input retrieveInput];
             id <ResourceParser> parser = [[TextParser alloc] initWithCommands:commands];
-            [parser checkBatch];
-            [parser performOperations];
+            if ([parser checkBatch]) {
+                NSLog(@"%s returned value:%f",argv[i],[parser performOperations]);
+            }
         }
     }
     return 0;

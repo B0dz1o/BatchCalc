@@ -54,6 +54,7 @@ NSArray <NSString *> * operations;
     }
 }
 
+//Perform operations one by one and return final value
 -(double) performOperations {
     double result;
     NSString * lineLast = [operations lastObject];
@@ -72,6 +73,7 @@ NSArray <NSString *> * operations;
     return result;
 }
 
+///Perform single operation
 -(double) singleOp: (NSString *) opCode value: (double) value operand: (double) operand {
     if ([opCode isEqualToString:@"add"]) {
         return value + operand;
