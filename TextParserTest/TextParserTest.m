@@ -66,14 +66,24 @@
     }];
 }
 
-- (void) testScanner {
-    NSScanner * nss = [NSScanner scannerWithString:@"add 2.04"];
-    NSString *res;
-    double d;
-    [nss scanUpToString:@" " intoString:&res];
-    [nss scanDouble:&d];
-    NSLog(@"juz %@",res);
-    NSLog(@"juz %@",res);
+- (void) testOp {
+    NSString * comm = @"add 2.04\nmultiply 1\ndivide 12.3\nsubtract -5.2\npower -12.3\napply -2";
+    XCTAssertEqual(-2, [[[TextParser alloc] initWithCommands:comm] performOperations]);
+    
+    comm = @"subtract 2\napply 7";
+    XCTAssertEqual(7, [[[TextParser alloc] initWithCommands:comm] performOperations]);
+    
+    comm = @"power 2\napply 1.0";
+    XCTAssertEqual(1, [[[TextParser alloc] initWithCommands:comm] performOperations]);
+    
+    comm = @"add 2\napply -1.0";
+    XCTAssertEqual(-1, [[[TextParser alloc] initWithCommands:comm] performOperations]);
+    
+    comm = @"multiply 3\nadd 5\napply 0";
+    XCTAssertEqual(0, [[[TextParser alloc] initWithCommands:comm] performOperations]);
+    
+    comm = @"add 2\napply 1e5";
+    XCTAssertEqual(1e5, [[[TextParser alloc] initWithCommands:comm] performOperations]);
 }
 
 @end
