@@ -1,0 +1,6 @@
+add 2.04
+multiply 1
+divide 12.3
+subtract -5.2
+power -12.3
+apply -2

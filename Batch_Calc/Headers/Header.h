@@ -11,6 +11,8 @@
 
 #import "TextResource.h"
 #import "FileHandler.h"
+#import "TextParser.h"
+#import "ResourceParser.h"
 
 
 #endif /* Header_h */
