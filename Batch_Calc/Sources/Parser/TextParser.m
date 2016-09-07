@@ -73,6 +73,17 @@ NSArray <NSString *> * operations;
 }
 
 -(double) singleOp: (NSString *) opCode value: (double) value operand: (double) operand {
+    if ([opCode isEqualToString:@"add"]) {
+        return value + operand;
+    } else if ([opCode isEqualToString:@"subtract"]) {
+        return value - operand;
+    } else if ([opCode isEqualToString:@"multiply"]) {
+        return value * operand;
+    } else if ([opCode isEqualToString:@"divide"]) {
+        return value / operand;
+    } else if ([opCode isEqualToString:@"power"]) {
+        return pow(value, operand);
+    }
     return value;
 }
 

@@ -67,23 +67,23 @@
 }
 
 - (void) testOpEquality {
-    NSString * comm = @"add 2.04\nmultiply 1\ndivide 12.3\nsubtract -5.2\npower -12.3\napply -2";
-    XCTAssertEqual(-2, [[[TextParser alloc] initWithCommands:comm] performOperations]);
+    NSString * comm = @"add 2.04\nmultiply 25\ndivide 2\nsubtract -5.0\napply -2";
+    XCTAssertEqual(5.5, [[[TextParser alloc] initWithCommands:comm] performOperations]);
     
-    comm = @"subtract 2\napply 7";
-    XCTAssertEqual(7, [[[TextParser alloc] initWithCommands:comm] performOperations]);
+    comm = @"subtract 2\nmultiply 3\napply 7";
+    XCTAssertEqual(15, [[[TextParser alloc] initWithCommands:comm] performOperations]);
     
-    comm = @"power 2\napply 1.0";
-    XCTAssertEqual(1, [[[TextParser alloc] initWithCommands:comm] performOperations]);
+    comm = @"power 2\nmultiply 3.2\napply 1.0";
+    XCTAssertEqual(3.2, [[[TextParser alloc] initWithCommands:comm] performOperations]);
     
-    comm = @"add 2\napply -1.0";
-    XCTAssertEqual(-1, [[[TextParser alloc] initWithCommands:comm] performOperations]);
+    comm = @"add 2\ndivide 5\napply -1.0";
+    XCTAssertEqual(0.2, [[[TextParser alloc] initWithCommands:comm] performOperations]);
     
     comm = @"multiply 3\nadd 5\napply 0";
-    XCTAssertEqual(0, [[[TextParser alloc] initWithCommands:comm] performOperations]);
+    XCTAssertEqual(5, [[[TextParser alloc] initWithCommands:comm] performOperations]);
     
     comm = @"add 2\napply 1e5";
-    XCTAssertEqual(1e5, [[[TextParser alloc] initWithCommands:comm] performOperations]);
+    XCTAssertEqual(1e5+2, [[[TextParser alloc] initWithCommands:comm] performOperations]);
 }
 
 - (void) testOpPerformance {
@@ -108,6 +108,27 @@
             [[[TextParser alloc] initWithCommands:comm] performOperations];
         }
     }];
+}
+
+- (void) testSingleOp {
+    NSString * comm = @"add 3\napply 3";
+    XCTAssertEqual(6, [[[TextParser alloc] initWithCommands:comm] performOperations]);
+    
+    comm = @"subtract 3\napply 3";
+    XCTAssertEqual(0, [[[TextParser alloc] initWithCommands:comm] performOperations]);
+    
+    comm = @"power 3\napply 3";
+    XCTAssertEqual(27, [[[TextParser alloc] initWithCommands:comm] performOperations]);
+    
+    comm = @"multiply 3\napply 3";
+    XCTAssertEqual(9, [[[TextParser alloc] initWithCommands:comm] performOperations]);
+    
+    comm = @"divide 3\napply 3";
+    XCTAssertEqual(1, [[[TextParser alloc] initWithCommands:comm] performOperations]);
+    
+    //Only for sake of full UT coverage
+    comm = @"wrongOp 3\napply 3";
+    XCTAssertEqual(3, [[[TextParser alloc] initWithCommands:comm] performOperations]);
 }
 
 
