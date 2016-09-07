@@ -56,7 +56,7 @@
     XCTAssertNotNil([[TextParser alloc] initWithCommands:@"add 2.04\nmultiply 1\ndivide 12.3\nsubtract -5.2\npower -12.3\napply -2"]);
 }
 
-- (void)testPerformance {
+- (void)testParsePerformance {
     NSString * comm = @"add 2.04\nmultiply 1\ndivide 12.3\nsubtract -5.2\npower -12.3\napply -2";
     TextParser * tP = [[TextParser alloc] initWithCommands:comm];
     [self measureBlock:^{
@@ -66,7 +66,7 @@
     }];
 }
 
-- (void) testOp {
+- (void) testOpEquality {
     NSString * comm = @"add 2.04\nmultiply 1\ndivide 12.3\nsubtract -5.2\npower -12.3\napply -2";
     XCTAssertEqual(-2, [[[TextParser alloc] initWithCommands:comm] performOperations]);
     
@@ -85,5 +85,30 @@
     comm = @"add 2\napply 1e5";
     XCTAssertEqual(1e5, [[[TextParser alloc] initWithCommands:comm] performOperations]);
 }
+
+- (void) testOpPerformance {
+    [self measureBlock:^{
+        for(int i = 0 ; i < 1000; ++i) {
+            NSString * comm = @"add 2.04\nmultiply 1\ndivide 12.3\nsubtract -5.2\npower -12.3\napply -2";
+            [[[TextParser alloc] initWithCommands:comm] performOperations];
+            
+            comm = @"subtract 2\napply 7";
+            [[[TextParser alloc] initWithCommands:comm] performOperations];
+            
+            comm = @"power 2\napply 1.0";
+            [[[TextParser alloc] initWithCommands:comm] performOperations];
+            
+            comm = @"add 2\napply -1.0";
+            [[[TextParser alloc] initWithCommands:comm] performOperations];
+            
+            comm = @"multiply 3\nadd 5\napply 0";
+            [[[TextParser alloc] initWithCommands:comm] performOperations];
+            
+            comm = @"add 2\napply 1e5";
+            [[[TextParser alloc] initWithCommands:comm] performOperations];
+        }
+    }];
+}
+
 
 @end
