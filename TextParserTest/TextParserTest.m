@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "Header.h"
 
 @interface TextParserTest : XCTestCase
 
@@ -16,23 +17,47 @@
 
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)testProtocol {
+    TextParser * tP = [[TextParser alloc] initWithCommands:@""];
+    BOOL conforms = [[tP class] conformsToProtocol:@protocol(ResourceParser)];
+    XCTAssertTrue(conforms);
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
+- (void)testRegex {
+    NSString * comm = @"add 2\napply 1";
+    TextParser * tP = [[TextParser alloc] initWithCommands:comm];
+    XCTAssertTrue([tP checkBatch]);
+    
+    comm = @"apply 2\nadd 1";
+    tP = [[TextParser alloc] initWithCommands:comm];
+    XCTAssertFalse([tP checkBatch]);
+    
+    comm = @"appl 2\nadd 1";
+    tP = [[TextParser alloc] initWithCommands:comm];
+    XCTAssertFalse([tP checkBatch]);
+    
+    comm = @"add 2\napply 1-2";
+    tP = [[TextParser alloc] initWithCommands:comm];
+    XCTAssertFalse([tP checkBatch]);
+    
+    comm = @"add 2.04\nmultiply 1\ndivide 12.3\nsubtract -5.2\npower -12.3\napply -2";
+    tP = [[TextParser alloc] initWithCommands:comm];
+    XCTAssertTrue([tP checkBatch]);
+}
+
+- (void)testPerformance {
+    NSString * comm = @"add 2.04\nmultiply 1\ndivide 12.3\nsubtract -5.2\npower -12.3\napply -2";
+    TextParser * tP = [[TextParser alloc] initWithCommands:comm];
     [self measureBlock:^{
-        // Put the code you want to measure the time of here.
+        for (int i = 0; i < 1000; ++i) {
+            [tP checkBatch];
+        }
     }];
 }
 

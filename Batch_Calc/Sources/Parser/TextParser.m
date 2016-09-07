@@ -23,14 +23,14 @@ NSArray <NSString *> * operations;
 
 -(BOOL) checkBatch {
     NSUInteger countOps = [operations count] - 1;
-    NSString * pattern = @"^(add|multiply|power|divide|subtract) \\d+\\.?\\d+?$";
+    NSString * pattern = @"^(add|multiply|power|divide|subtract) -?\\d+(\\.)?\\d*$";
     for (NSUInteger i = 0; i < countOps ; ++i) {
         NSString * line = [operations objectAtIndex:i];
         if (![self checkPattern: pattern forLine: line]) {
             return false;
         }
     }
-    NSString * patternLast = @"^apply \\d+\\.?\\d+?$";
+    NSString * patternLast = @"^apply -?\\d+(\\.)?\\d*$";
     NSString * lineLast = [operations lastObject];
     if (![self checkPattern:patternLast forLine:lineLast]) {
         return false;
@@ -42,9 +42,10 @@ NSArray <NSString *> * operations;
     NSRegularExpression * opRegex = [NSRegularExpression
                                      regularExpressionWithPattern:pattern
                                      options:NSRegularExpressionAnchorsMatchLines error:nil];
-    if (1 == [opRegex numberOfMatchesInString:line
-                                      options:NSMatchingWithoutAnchoringBounds
-                                        range:NSMakeRange(0, [line length])]) {
+    NSUInteger i =[opRegex numberOfMatchesInString:line
+                                           options:NSMatchingWithoutAnchoringBounds
+                                             range:NSMakeRange(0, [line length])];
+    if (1 == i) {
         return true;
     } else {
         return false;
@@ -57,9 +58,6 @@ NSArray <NSString *> * operations;
 
 -(void) splitBatch: (NSString *) batch {
     operations = [batch componentsSeparatedByString:@"\n"];
-    for (NSUInteger i = 0 ; i < [operations count] ; ++i) {
-        NSLog(@"%@", [operations objectAtIndex:i]);
-    }
 }
 
 

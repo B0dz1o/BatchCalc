@@ -54,10 +54,10 @@
 - (void)testMain {
 }
 
-- (void)testPerformanceExample {
+- (void)testPerformance {
     [self measureBlock:^{
         NSString * batch = [[NSBundle bundleForClass:[self class]] pathForResource:@"bat1" ofType:@"txt"];
-        for (int i = 0; i < 100; ++i) {
+        for (int i = 0; i < 1000; ++i) {
             [[[FileHandler alloc] initWithFile:batch] retrieveInput];
         }
     }];
