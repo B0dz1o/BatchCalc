@@ -29,6 +29,10 @@
     XCTAssertTrue(conforms);
 }
 
+- (void)testOpenNil {
+    FileHandler * fH = [[FileHandler alloc] initWithFile:@""];
+    XCTAssertNil([fH retrieveInput]);
+}
 
 - (void)testOpenTwice {
     NSString * batch = [[NSBundle bundleForClass:[self class]] pathForResource:@"bat1" ofType:@"txt"];
@@ -52,7 +56,10 @@
 
 - (void)testPerformanceExample {
     [self measureBlock:^{
-
+        NSString * batch = [[NSBundle bundleForClass:[self class]] pathForResource:@"bat1" ofType:@"txt"];
+        for (int i = 0; i < 100; ++i) {
+            [[[FileHandler alloc] initWithFile:batch] retrieveInput];
+        }
     }];
 }
 
