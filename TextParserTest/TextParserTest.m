@@ -51,6 +51,11 @@
     XCTAssertTrue([tP checkBatch]);
 }
 
+- (void) testInit {
+    XCTAssertNotNil([[TextParser alloc] initWithCommands:@""]);
+    XCTAssertNotNil([[TextParser alloc] initWithCommands:@"add 2.04\nmultiply 1\ndivide 12.3\nsubtract -5.2\npower -12.3\napply -2"]);
+}
+
 - (void)testPerformance {
     NSString * comm = @"add 2.04\nmultiply 1\ndivide 12.3\nsubtract -5.2\npower -12.3\napply -2";
     TextParser * tP = [[TextParser alloc] initWithCommands:comm];
@@ -59,6 +64,16 @@
             [tP checkBatch];
         }
     }];
+}
+
+- (void) testScanner {
+    NSScanner * nss = [NSScanner scannerWithString:@"add 2.04"];
+    NSString *res;
+    double d;
+    [nss scanUpToString:@" " intoString:&res];
+    [nss scanDouble:&d];
+    NSLog(@"juz %@",res);
+    NSLog(@"juz %@",res);
 }
 
 @end

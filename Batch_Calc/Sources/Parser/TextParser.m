@@ -27,12 +27,14 @@ NSArray <NSString *> * operations;
     for (NSUInteger i = 0; i < countOps ; ++i) {
         NSString * line = [operations objectAtIndex:i];
         if (![self checkPattern: pattern forLine: line]) {
+            NSLog(@"Problem processing line:\n\t%@",line);
             return false;
         }
     }
     NSString * patternLast = @"^apply -?\\d+(\\.)?\\d*$";
     NSString * lineLast = [operations lastObject];
     if (![self checkPattern:patternLast forLine:lineLast]) {
+        NSLog(@"Problem processing line:\n\t%@",lineLast);
         return false;
     }
     return true;
@@ -52,8 +54,26 @@ NSArray <NSString *> * operations;
     }
 }
 
--(void) performOperations {
-    
+-(double) performOperations {
+    double result;
+    NSString * lineLast = [operations lastObject];
+    NSScanner * nss = [NSScanner scannerWithString:lineLast];
+    [nss scanUpToString:@" " intoString:nil];
+    [nss scanDouble:&result];
+    NSUInteger countOps = [operations count] - 1;
+    for (NSUInteger i = 0; i < countOps; ++i) {
+        double operand;
+        NSString * opCode;
+        nss = [NSScanner scannerWithString:[operations objectAtIndex:i]];
+        [nss scanUpToString:@" " intoString:&opCode];
+        [nss scanDouble: &operand];
+        result = [self singleOp:opCode value:result operand:operand];
+    }
+    return result;
+}
+
+-(double) singleOp: (NSString *) opCode value: (double) value operand: (double) operand {
+    return value;
 }
 
 -(void) splitBatch: (NSString *) batch {

@@ -55,6 +55,7 @@
 		67FEFC871D807855005A0EA6 /* TextParserTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextParserTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67FEFC891D807856005A0EA6 /* TextParserTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextParserTest.m; sourceTree = "<group>"; };
 		67FEFC8B1D807856005A0EA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67FEFC941D8081A8005A0EA6 /* bat4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = bat4.txt; path = TestResources/bat4.txt; sourceTree = "<group>"; };
 		745DDE40E891746B2B215265 /* Pods-Batch_Calc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Batch_Calc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Batch_Calc/Pods-Batch_Calc.debug.xcconfig"; sourceTree = "<group>"; };
 		A82EFDD30530594AF0793F6D /* Pods-Batch_Calc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Batch_Calc.release.xcconfig"; path = "Pods/Target Support Files/Pods-Batch_Calc/Pods-Batch_Calc.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,6 +128,7 @@
 				672B3FE11D7F8D4C003C1557 /* bat1.txt */,
 				672B3FFB1D7FB273003C1557 /* bat2.txt */,
 				672B3FFC1D7FB291003C1557 /* bat3.txt */,
+				67FEFC941D8081A8005A0EA6 /* bat4.txt */,
 			);
 			name = TestResources;
 			sourceTree = "<group>";
