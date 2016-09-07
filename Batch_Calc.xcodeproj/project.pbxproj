@@ -1,0 +1,358 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		672B3FDF1D7F89A5003C1557 /* FileHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 672B3FDE1D7F89A5003C1557 /* FileHandler.m */; };
+		67E0E1E11D7F2CD4008CBDAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E0E1E01D7F2CD4008CBDAB /* main.m */; };
+		A7B96069C83397931C07F6C4 /* Pods_Batch_Calc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4CFC8AFFFEA1F776B725FB /* Pods_Batch_Calc.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		67E0E1DB1D7F2CD4008CBDAB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3E4CFC8AFFFEA1F776B725FB /* Pods_Batch_Calc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Batch_Calc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		672B3FD51D7F812A003C1557 /* TextResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextResource.h; path = Sources/Resources/TextResource.h; sourceTree = "<group>"; };
+		672B3FD81D7F84F3003C1557 /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Header.h; path = Headers/Header.h; sourceTree = "<group>"; };
+		672B3FDD1D7F89A5003C1557 /* FileHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileHandler.h; path = Sources/Resources/FileHandler.h; sourceTree = "<group>"; };
+		672B3FDE1D7F89A5003C1557 /* FileHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FileHandler.m; path = Sources/Resources/FileHandler.m; sourceTree = "<group>"; };
+		672B3FE11D7F8D4C003C1557 /* bat1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = bat1.txt; path = TestResources/bat1.txt; sourceTree = "<group>"; };
+		67E0E1DD1D7F2CD4008CBDAB /* Batch_Calc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Batch_Calc; sourceTree = BUILT_PRODUCTS_DIR; };
+		67E0E1E01D7F2CD4008CBDAB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		745DDE40E891746B2B215265 /* Pods-Batch_Calc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Batch_Calc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Batch_Calc/Pods-Batch_Calc.debug.xcconfig"; sourceTree = "<group>"; };
+		A82EFDD30530594AF0793F6D /* Pods-Batch_Calc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Batch_Calc.release.xcconfig"; path = "Pods/Target Support Files/Pods-Batch_Calc/Pods-Batch_Calc.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		67E0E1DA1D7F2CD4008CBDAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7B96069C83397931C07F6C4 /* Pods_Batch_Calc.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5C8F067B40F056E146C3E37A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				745DDE40E891746B2B215265 /* Pods-Batch_Calc.debug.xcconfig */,
+				A82EFDD30530594AF0793F6D /* Pods-Batch_Calc.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		672B3FD01D7F8075003C1557 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				672B3FD11D7F807F003C1557 /* Resources */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		672B3FD11D7F807F003C1557 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				672B3FD51D7F812A003C1557 /* TextResource.h */,
+				672B3FDD1D7F89A5003C1557 /* FileHandler.h */,
+				672B3FDE1D7F89A5003C1557 /* FileHandler.m */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		672B3FD61D7F8303003C1557 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				672B3FD81D7F84F3003C1557 /* Header.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		672B3FE01D7F8D1C003C1557 /* TestResources */ = {
+			isa = PBXGroup;
+			children = (
+				672B3FE11D7F8D4C003C1557 /* bat1.txt */,
+			);
+			name = TestResources;
+			sourceTree = "<group>";
+		};
+		67E0E1D41D7F2CD4008CBDAB = {
+			isa = PBXGroup;
+			children = (
+				672B3FE01D7F8D1C003C1557 /* TestResources */,
+				67E0E1DF1D7F2CD4008CBDAB /* Batch_Calc */,
+				67E0E1DE1D7F2CD4008CBDAB /* Products */,
+				5C8F067B40F056E146C3E37A /* Pods */,
+				6EBA45C0A7F0F19377AA90CE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		67E0E1DE1D7F2CD4008CBDAB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				67E0E1DD1D7F2CD4008CBDAB /* Batch_Calc */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		67E0E1DF1D7F2CD4008CBDAB /* Batch_Calc */ = {
+			isa = PBXGroup;
+			children = (
+				672B3FD61D7F8303003C1557 /* Headers */,
+				672B3FD01D7F8075003C1557 /* Sources */,
+				67E0E1E01D7F2CD4008CBDAB /* main.m */,
+			);
+			path = Batch_Calc;
+			sourceTree = "<group>";
+		};
+		6EBA45C0A7F0F19377AA90CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E4CFC8AFFFEA1F776B725FB /* Pods_Batch_Calc.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		67E0E1DC1D7F2CD4008CBDAB /* Batch_Calc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67E0E1E41D7F2CD4008CBDAB /* Build configuration list for PBXNativeTarget "Batch_Calc" */;
+			buildPhases = (
+				320B85E0934E15DDB7CF3E5F /* [CP] Check Pods Manifest.lock */,
+				67E0E1D91D7F2CD4008CBDAB /* Sources */,
+				67E0E1DA1D7F2CD4008CBDAB /* Frameworks */,
+				67E0E1DB1D7F2CD4008CBDAB /* CopyFiles */,
+				B5CC2A1044EC6FD6EE88AEF2 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Batch_Calc;
+			productName = Batch_Calc;
+			productReference = 67E0E1DD1D7F2CD4008CBDAB /* Batch_Calc */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		67E0E1D51D7F2CD4008CBDAB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Piotr Bogdan";
+				TargetAttributes = {
+					67E0E1DC1D7F2CD4008CBDAB = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 67E0E1D81D7F2CD4008CBDAB /* Build configuration list for PBXProject "Batch_Calc" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 67E0E1D41D7F2CD4008CBDAB;
+			productRefGroup = 67E0E1DE1D7F2CD4008CBDAB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				67E0E1DC1D7F2CD4008CBDAB /* Batch_Calc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		320B85E0934E15DDB7CF3E5F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B5CC2A1044EC6FD6EE88AEF2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Batch_Calc/Pods-Batch_Calc-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		67E0E1D91D7F2CD4008CBDAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				672B3FDF1D7F89A5003C1557 /* FileHandler.m in Sources */,
+				67E0E1E11D7F2CD4008CBDAB /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		67E0E1E21D7F2CD4008CBDAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		67E0E1E31D7F2CD4008CBDAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		67E0E1E51D7F2CD4008CBDAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 745DDE40E891746B2B215265 /* Pods-Batch_Calc.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				HEADER_SEARCH_PATHS = "${SRCROOT}/Sources";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Debug;
+		};
+		67E0E1E61D7F2CD4008CBDAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A82EFDD30530594AF0793F6D /* Pods-Batch_Calc.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				HEADER_SEARCH_PATHS = "${SRCROOT}/Sources";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		67E0E1D81D7F2CD4008CBDAB /* Build configuration list for PBXProject "Batch_Calc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67E0E1E21D7F2CD4008CBDAB /* Debug */,
+				67E0E1E31D7F2CD4008CBDAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67E0E1E41D7F2CD4008CBDAB /* Build configuration list for PBXNativeTarget "Batch_Calc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67E0E1E51D7F2CD4008CBDAB /* Debug */,
+				67E0E1E61D7F2CD4008CBDAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 67E0E1D51D7F2CD4008CBDAB /* Project object */;
+}
