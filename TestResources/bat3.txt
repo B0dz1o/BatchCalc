@@ -1,0 +1,5 @@
+multiply 2
+add 5
+divide 3
+subtract 5
+apply 3.0
