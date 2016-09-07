@@ -11,12 +11,17 @@
 
 @interface FileHandlerTest : XCTestCase
 
+@property NSArray <NSString *> * resources;
+
 @end
 
 @implementation FileHandlerTest
 
+@synthesize resources;
+
 - (void)setUp {
     [super setUp];
+    [self setResources: [[NSBundle bundleForClass:[self class]] pathsForResourcesOfType:@"txt" inDirectory:@""] ];
 }
 
 - (void)tearDown {
@@ -43,22 +48,29 @@
 }
 
 - (void)testOpenAll {
-    for (int i = 1; i <=3; ++i) {
-        NSString * path = [NSString stringWithFormat:@"bat%d", i];
-        NSString * resource = [[NSBundle bundleForClass:[self class]] pathForResource:path ofType:@"txt"];
-        NSString * fileContent = [[[FileHandler alloc] initWithFile:resource] retrieveInput];
+    NSUInteger len = [[self resources] count];
+    for (NSUInteger i = 0; i < len; ++i) {
+        NSString * path = [[self resources] objectAtIndex:i];
+        NSString * fileContent = [[[FileHandler alloc] initWithFile:path] retrieveInput];
         XCTAssertNotNil(fileContent);
     }
 }
 
-- (void)testMain {
+- (void)testBat3 {
+    NSString * expected = @"multiply 2\nadd 5\ndivide 3\nsubtract 5\napply 3.0";
+    NSString * batch = [[NSBundle bundleForClass:[self class]] pathForResource:@"bat3" ofType:@"txt"];
+    NSString * fileContent = [[[FileHandler alloc] initWithFile:batch] retrieveInput];
+    XCTAssertEqualObjects(expected, fileContent);
 }
 
-- (void)testPerformanceExample {
+- (void)testPerformance {
     [self measureBlock:^{
-        NSString * batch = [[NSBundle bundleForClass:[self class]] pathForResource:@"bat1" ofType:@"txt"];
-        for (int i = 0; i < 100; ++i) {
-            [[[FileHandler alloc] initWithFile:batch] retrieveInput];
+        NSUInteger len = [[self resources] count];
+        for (NSUInteger i = 0; i < len; ++i) {
+            NSString * path = [[self resources] objectAtIndex:i];
+            for (int i = 0; i < 100; ++i) {
+                [[[FileHandler alloc] initWithFile:path] retrieveInput];
+            }
         }
     }];
 }
