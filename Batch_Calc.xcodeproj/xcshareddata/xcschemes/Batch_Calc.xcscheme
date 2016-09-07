@@ -57,6 +57,16 @@
                referenceType = "1">
             </LocationScenarioReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "67FEFC861D807855005A0EA6"
+               BuildableName = "TextParserTest.xctest"
+               BlueprintName = "TextParserTest"
+               ReferencedContainer = "container:Batch_Calc.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
