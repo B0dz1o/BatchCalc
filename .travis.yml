@@ -2,3 +2,10 @@ language: objective-c
 osx_image: xcode7.3
 xcode_workspace: Batch_Calc.xcworkspace
 xcode_scheme: Batch_Calc
+branches:
+  only:
+    - master
+    - development
+    - /^release\/\w+/
+
+
