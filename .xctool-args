@@ -1,0 +1,5 @@
+[
+  "-workspace", "Batch_Calc.xcworkspace",
+  "-scheme", "Batch_Calc",
+  "-configuration", "Debug"
+]
